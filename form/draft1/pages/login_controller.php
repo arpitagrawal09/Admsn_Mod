@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <HTML>
     <head>
+        <link rel="stylesheet" href="./css/login_controller.css">
         <title>Admission Login!</title>
     </head>
     <body>
