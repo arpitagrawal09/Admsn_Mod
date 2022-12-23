@@ -16,7 +16,7 @@ if(isset($_POST)&&!empty($_POST)){
 <HTML>
     <head>
         <title>Admission Form</title>
-        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="pd.css">
     </head>
     <body>
         <br>
