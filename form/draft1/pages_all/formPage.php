@@ -19,22 +19,36 @@ if(isset($_POST)&&!empty($_POST)){
         <link rel="stylesheet" href="pd.css">
     </head>
     <body>
-        <div class="container" class="allDetailsForms" id="divAllDetails" name="divAllDetails">
-            <br>
 
-            <div class="detailsdiv personal" name="divPersonalDetails" id="divPersonalDetails">
-                <div
-            </div>
-        </div>
         <div class="pageHeading1" id="pdPageHeading1">
             <center><b><p>MOCK FLOW OF THE ADMISSION FORM</p><b></b></center></b>
         </div>
         <hr>
-        <form>
-            <label>B.A.</label>
-            <select id="B.A." name="B.A.">
+
+        <div class="container" class="allDetailsForms" id="divAllDetails" name="divAllDetails">
+            <br>
+           
+            <form id="allDetailsForm" name="allDetailsForm" action="paymentPage.php" method="POST">
+                <div class="detailsdiv personal" name="divPersonalDetails" id="divPersonalDetails">
+                    <div class="row one" id="pdRow1" name="pdRow1">
+
+                    </div>
+                    <div class="row two" id="pdRow2" name="pdRow2">
+
+                    </div>
+                <div>
+             
+                <div class="courseSelDiv" id="idCourseSel" name="nameCourseSel">
+                    <div class="row degreeRow">                              
+                        <label>B.A.</label>
+                        <select id="ddnBA" name="ddnBA">
                 
-            </select>
-        </form>
+                        </select>        
+                    </div>                                
+                </div>  
+
+            </form>
+        </div>
+
     </body>
 </HTML>
