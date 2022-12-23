@@ -6,23 +6,28 @@
     </head>
     <body>
         <br>
-        <div class="pageHeading login" id="loginHeading" name="loginHeading">
-            <h1><marquee>Admissions for all the programs are open!</marquee></h1>
+        <div class="Heading1 loginPage" id="loginHeading1" name="loginHeading1">
+            <marquee>Admissions for all the programs are open!</marquee>
         </div>
         <br>
         <form action="pd.php" method="POST">
-            <div class="loginBox">
+            <br>
+            <div class="loginBox" id="loginBox">
+                <br><br>
                 <div id=#username>
                     <label id="username">Username</label>
+                    <br>
                     <input type="text" id="username" name="username">
                 </div>
-                <br><br>
+                <br>
                 <div>
                     <label id="password">Password</label>
+                    <br>
                     <input type="text" id="password" name="password">
                 </div>
-                <br><br>
+                <br>
                 <button type="submit" id="loginButton" name="loginButton">Login</button>
+                <br><br>
             </div>
         </form>
     </body>
