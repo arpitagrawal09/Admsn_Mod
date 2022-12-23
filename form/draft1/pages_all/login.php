@@ -27,10 +27,10 @@
         
         <form action="login_controller.php" method="POST">
             <div class="loginBox">
-            <h1>LOGIN</h1>
-            <br>
-            <label id="program">Select Program</label>
-            <select id="program" name="program">
+                <h1>LOGIN</h1>
+                <br>
+                <label id="program">Select Program</label>
+                <select id="program" name="program">
                 <?php
                     /* require_once "API.php";
                     $recordAPI=new API();
@@ -46,15 +46,16 @@
                 ?>
                 <option value="1">Undergraduate</option>
                 <option value="2">Postgraduate</option>
-            </select>
-            <br><br>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username">
-            <br><br>
-            <label for="password">Password</label>
-            <input type="text" id="password" name="password">
-            <br><br>
-            <button type="sumbit" id="buttonLogin" name="buttonLogin" onclick="validate()">Login</button>
+                </select>
+                <br><br>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <br><br>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password">
+                <br><br>
+                <button type="sumbit" id="buttonLogin" name="buttonLogin" onclick="validate()">Login</button>
+                <br>    
             </div>
         </form>
       
