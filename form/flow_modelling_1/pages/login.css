@@ -1,0 +1,9 @@
+marquee{
+    font-size: 28px;
+    font-weight: 200;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+label #username, #password{
+    font-size: 18px;
+}
