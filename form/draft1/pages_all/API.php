@@ -16,4 +16,7 @@ class API{
         }
     }
 }
+
+$APITest = new API();
+$APITest->getAllProg();
 ?>
