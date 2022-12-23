@@ -13,11 +13,17 @@ if(isset($_POST)&&!empty($_POST)){
 }else echo "Error in receiving the student login details/program";
 ?>
 
-<html>
+<HTML>
     <head>
-        
+        <title>Admission Form</title>
+        <link rel="stylesheet" href="css/all.css">
     </head>
     <body>
+        <br>
+        <div class="form_heading">
+            <center><b><p>MOCK FLOW OF THE ADMISSION FORM</p><b></b></center></b>
+        </div>
+        <hr>
         <form>
             <label>B.A.</label>
             <select id="B.A." name="B.A.">
@@ -25,4 +31,4 @@ if(isset($_POST)&&!empty($_POST)){
             </select>
         </form>
     </body>
-</html>
+</HTML>

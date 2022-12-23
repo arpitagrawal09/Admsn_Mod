@@ -3,17 +3,20 @@
     <head>
         <link rel="stylesheet" href="login.css">
         <script>
-            function validate(){
-                var username=document.getElementById("username");
-                var password=document.getElementById("password");
-                if(username!="username"){
-                    alert("Please enter the correct username");
-                    return false;
-                }else if(password!="password"){
-                    alert("Please enter the correct password");
-                    return false;
-                }else return true;
-            }
+            //function validate(){
+                //alert("Javascript begins!");
+                //var username=document.getElementById("username").value;
+                //alert("The username entered is"+username);
+                //var password=document.getElementById("password").value;
+                //if(username!="username"){
+                //    alert("Please enter the correct username");
+                //}
+                //return false;
+                //if(password!="password"){
+                //    alert("Please enter the correct password");
+                //}
+                //return false;
+            //}
         </script>
         <title>Login IIS University!</title>
     </head>
@@ -45,10 +48,10 @@
                 <option value="2">Postgraduate</option>
             </select>
             <br><br>
-            <label id="username">Username</label>
+            <label for="username">Username</label>
             <input type="text" id="username" name="username">
             <br><br>
-            <label id="password">Password</label>
+            <label for="password">Password</label>
             <input type="text" id="password" name="password">
             <br><br>
             <button type="sumbit" id="buttonLogin" name="buttonLogin" onclick="validate()">Login</button>
