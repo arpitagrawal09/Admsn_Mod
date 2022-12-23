@@ -22,16 +22,27 @@
     $degreeMasterTable=$conn->query($sql);
     if($degreeMasterTable) echo "Master table degrees successfully fetched<br>";
     else "Error in getting master table degrees<br>";
+<<<<<<< HEAD
     //echo "<PRE>";
+=======
+    echo "<PRE>";
+>>>>>>> 0464f9cc34b338396bb28f338b0cb7443f993d8d
     if($degreeMasterTable){
         while($degree=$degreeMasterTable->fetch_row()){
             $degreeMasterArr[]=$degree;
         }
     }
+<<<<<<< HEAD
     //print_r($degreeMasterTable);
     //echo "<br>";
     //print_r($degreeMasterArr);
     //echo "<br>";
+=======
+    print_r($degreeMasterTable);
+    echo "<br>";
+    print_r($degreeMasterArr);
+    echo "<br>";
+>>>>>>> 0464f9cc34b338396bb28f338b0cb7443f993d8d
 
     $masterArr['prog']=$progMasterArr;
     $masterArr['degrees']=$degreeMasterArr;

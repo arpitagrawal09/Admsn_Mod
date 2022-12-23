@@ -35,7 +35,11 @@
                         <?php
                             require "master_data.php";
                             foreach($progMasterArr as $prog){
+<<<<<<< HEAD
                                 echo "<option value=".$prog[0].">".$prog[1]."</option>";
+=======
+                                echo "<option value=".$degree[0].">".$prog[2]."</option>";
+>>>>>>> 0464f9cc34b338396bb28f338b0cb7443f993d8d
                             }
                         ?>
                 </select>
