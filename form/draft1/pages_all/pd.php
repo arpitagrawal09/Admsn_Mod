@@ -19,7 +19,9 @@ if(isset($_POST)&&!empty($_POST)){
         <link rel="stylesheet" href="pd.css">
     </head>
     <body>
-        <br>
+        <div class="container" class="allDetailsForms" id="" name=">
+            <br>
+        </div>
         <div class="pageHeading1" id="pdPageHeading1">
             <center><b><p>MOCK FLOW OF THE ADMISSION FORM</p><b></b></center></b>
         </div>
