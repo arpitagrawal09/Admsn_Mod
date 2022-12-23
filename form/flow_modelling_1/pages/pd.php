@@ -1,7 +1,7 @@
 <HTML>
     <head>
         <title>Admission Form</title>
-        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="all.css">
     </head>
     <body>
         <br>
