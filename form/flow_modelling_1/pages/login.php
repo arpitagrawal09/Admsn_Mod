@@ -6,7 +6,9 @@
     </head>
     <body>
         <br>
-        <marquee>Admissions for all the programs are open!</marquee>
+        <div class="pageHeading login" id="loginHeading" name="loginHeading">
+            <h1><marquee>Admissions for all the programs are open!</marquee></h1>
+        </div>
         <br>
         <form action="pd.php" method="POST">
             <div class="loginBox">
