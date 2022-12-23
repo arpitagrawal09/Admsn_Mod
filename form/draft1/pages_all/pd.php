@@ -20,7 +20,7 @@ if(isset($_POST)&&!empty($_POST)){
     </head>
     <body>
         <br>
-        <div class="form_heading">
+        <div class="pageHeading1" id="pdPageHeading1">
             <center><b><p>MOCK FLOW OF THE ADMISSION FORM</p><b></b></center></b>
         </div>
         <hr>
