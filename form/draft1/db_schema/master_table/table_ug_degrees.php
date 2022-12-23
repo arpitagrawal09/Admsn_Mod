@@ -10,7 +10,10 @@ $sql="CREATE TABLE `degrees`(
     `name` VARCHAR(163) NOT NULL, 
      `type` TINYINT(4) NOT NULL,
      FOREIGN KEY (`type`) REFERENCES `prog_type`(`type`)
-);".
+);";
+$result=$conn->query($sql);
+if($result) echo "Table degree_types created successfully";
+else echo "Error in creation of the table degree_types";
 
 /* CREATE TABLE `degree_types`(
     `id` TINYINT(5) PRIMARY KEY NOT NULL,
@@ -18,7 +21,7 @@ $sql="CREATE TABLE `degrees`(
     FOREIGN KEY (`id`) REFERENCES `degrees`(`type`)
 ); */    
 
-"INSERT INTO `degrees` VALUES (1, 'B.A.', 1),
+$sql="INSERT INTO `degrees` VALUES (1, 'B.A.', 1),
                             (2, 'B.A.(Hons.)', 1),
                             (5, 'B.Sc.', 1),
                             (6, 'B.Sc.(Hons.)', 1),
@@ -28,6 +31,6 @@ $sql="CREATE TABLE `degrees`(
                             (47, 'M.B.A.(International Business)', 2);
 ";  
 $result=$conn->query($sql);
-if($result) echo "Table degree_types created and filled successfully";
-else echo "Error in creation of the table degree_types";
+if($result) echo "Table degree_types configured successfully";
+else echo "Error in the configuration of the table degree_types";
 ?>
