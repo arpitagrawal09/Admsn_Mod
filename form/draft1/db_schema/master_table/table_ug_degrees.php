@@ -9,7 +9,7 @@ $sql="CREATE TABLE `degrees`(
     `id` SMALLINT(9) PRIMARY KEY NOT NULL,
     `name` VARCHAR(163) NOT NULL, 
      `type` TINYINT(4) NOT NULL,
-     FOREIGN KEY (`type`) REFERENCES `prog_type`(`type`)
+     FOREIGN KEY (`type`) REFERENCES `prog_type`(`id`)
 );";
 $result=$conn->query($sql);
 if($result) echo "Table degree_types created successfully";
