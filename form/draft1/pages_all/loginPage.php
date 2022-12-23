@@ -29,14 +29,15 @@
             <div class="loginBox">
                 <h1>LOGIN</h1>
                 <br>
-                <label id="program">Select Program</label>
-                <select id="program" name="program">
-                    <?php
-                        require "master_data.php";
-                        foreach($progMasterArr as $prog){
-                            echo "<option value=".$prog[0].">".$prog[2]."</option>";
-                        }
-                    ?>
+                <label id="program">Program Type</label>
+                    <select id="program" name="program">
+                        <option value="none" disabled>--Select--</option>
+                        <?php
+                            require "master_data.php";
+                            foreach($progMasterArr as $prog){
+                                echo "<option value=".$prog[0].">".$prog[2]."</option>";
+                            }
+                        ?>
                 </select>
                 <br><br>
                 <label for="username">Username</label>
