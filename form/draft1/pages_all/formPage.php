@@ -46,11 +46,7 @@ if(isset($_POST)&&!empty($_POST)){
                                 <?php
                                     require_once "master_data.php";
                                     foreach($progMasterArr as $prog){
-                                        echo"
-                                            $prog['0'] $prog[
-                                                
-                                            ]
-                                        ";
+                                        echo "<option value=".$prog['0'].">".$prog['2']."</option>";                                        ";
                                     }
                                 ?>
                             </select>        
