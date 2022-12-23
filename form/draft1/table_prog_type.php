@@ -5,7 +5,8 @@
 //get the connection
 require_once "connection.php";
 
-$sql="CREATE TABLE prog_type(
-    
-);"
+/* $sql="CREATE TABLE `prog_type`(
+    `id` tinyint(4) PRIMARY KEY NOT NULL,
+    type varchar(25) NOT NULL
+);"  */
 ?>

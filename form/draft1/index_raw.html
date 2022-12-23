@@ -5,6 +5,13 @@
     </head>
     <body>
         <div class="loginBox">
+            <select id="progList" name="progList">
+                <?php
+                    "include connection.php";
+
+                ?>
+                <option value="">Undergraduate</option>
+            </select>
             <label id="username">Username</label>
             <input type="text" id="username" name="username">
             <input type="text" id="password" name="password">
