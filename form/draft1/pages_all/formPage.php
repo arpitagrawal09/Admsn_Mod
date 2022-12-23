@@ -43,7 +43,16 @@ if(isset($_POST)&&!empty($_POST)){
                         <div class="col-sm-2">
                             <label>Degree Name</label>
                             <select id="ddnBA" name="ddnBA">
-                                
+                                <?php
+                                    require_once "master_data.php";
+                                    foreach($progMasterArr as $prog){
+                                        echo"
+                                            $prog['0'] $prog[
+                                                
+                                            ]
+                                        ";
+                                    }
+                                ?>
                             </select>        
                         </div>
                     </div>
