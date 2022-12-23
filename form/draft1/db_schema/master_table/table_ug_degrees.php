@@ -25,7 +25,7 @@ $sql="CREATE TABLE `degrees`(
                             (31, 'M.A.', 2),
                             (32, 'M.A.(Journalism and Mass Communication)', 2),
                             (46, 'M.B.A.(Human Resource Management)', 2),
-                            (47, 'M.B.A.(International Business)', 2)
+                            (47, 'M.B.A.(International Business)', 2);
 ";  
 $result=$conn->query($sql);
 if($result) echo "Table degree_types created and filled successfully";
