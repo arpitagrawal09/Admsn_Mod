@@ -35,7 +35,7 @@
                         <?php
                             require "master_data.php";
                             foreach($progMasterArr as $prog){
-                                echo "<option value=".$prog[0].">".$prog[2]."</option>";
+                                echo "<option value=".$degree[0].">".$prog[2]."</option>";
                             }
                         ?>
                 </select>
