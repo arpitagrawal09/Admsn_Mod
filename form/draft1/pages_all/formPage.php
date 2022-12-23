@@ -40,11 +40,13 @@ if(isset($_POST)&&!empty($_POST)){
              
                 <div class="courseSelDiv" id="idCourseSel" name="nameCourseSel">
                     <div class="row degreeRow">                              
-                        <label>B.A.</label>
-                        <select id="ddnBA" name="ddnBA">
-                
-                        </select>        
-                    </div>                                
+                        <div class="col-sm-2">
+                            <label>Degree Name</label>
+                            <select id="ddnBA" name="ddnBA">
+                                
+                            </select>        
+                        </div>
+                    </div>
                 </div>  
 
             </form>

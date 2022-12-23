@@ -2,7 +2,12 @@
     require "configuration.php";
     require "connection.php";
 
-    $progList=array();
+    $progMasterArr=array();
     $sql="SELECT * FROM `prog_type`";
-    $progTable=$conn->query($sql);
+    $progMasterTable=$conn->query($sql);
+    if($progMasterTable) echo "Master table prog_type successfully fetched<br>";
+    else "Error in getting master table prog_type<br>";
+    echo "<PRE>";
+    print_r($progMasterTable);
+    echo "<br>";
 ?>
