@@ -17,6 +17,10 @@ if(isset($_POST)&&!empty($_POST)){
     <head>
         <title>Admission Form</title>
         <link rel="stylesheet" href="pd.css">
+        <script src="jquery-3.6.1.min.js"></script>
+        <script>
+
+        </script>
     </head>
     <body>
 
@@ -45,8 +49,11 @@ if(isset($_POST)&&!empty($_POST)){
                             <select id="ddnBA" name="ddnBA">
                                 <?php
                                     require_once "master_data.php";
-                                    foreach($progMasterArr as $prog){
-                                        echo "<option value=".$prog[0].">".$prog[2]."</option>";
+                                    //$program=$_SESSION['user']['program'];
+                                    foreach($degreeMasterArr as $degree){
+                                        if($degree['2']==2){
+                                            echo "<option value=".$degree[0].">".$degree[1]."</option>";
+                                        }
                                     }
                                 ?>
                             </select>        
