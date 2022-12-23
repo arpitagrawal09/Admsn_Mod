@@ -8,10 +8,12 @@ class API{
     function getAllProg(){
         require_once "connection.php";
         $query="SELECT * FROM `prog_type`";
-        $prog=$conn->query($query);
-        if($prog) echo "Received the program successfully";
-        else echo "Error in fetching the program";
-        return $prog;
+        $allProg=$conn->query($query);
+        if($allProg){
+            while($oneProg=$allProg->fetch_row()){
+                print_r($oneProg);
+            }
+        }
     }
 }
 ?>

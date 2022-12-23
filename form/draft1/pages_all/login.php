@@ -32,17 +32,17 @@
                 <label id="program">Select Program</label>
                 <select id="program" name="program">
                 <?php
-                    /* require_once "API.php";
-                    $recordAPI=new API();
-                    $allProg=$recordAPI->getAllProg();
+                    require_once "API.php";
+                    $progAPI=new API();
+                    $recordAPI->getAllProg();
                     foreach($allProg as ){
 
                     }
-                    $prog_id=$prog['id'];
-                    $prog_name=$prog['name'];
+                    //$prog_id=$prog['id'];
+                    //$prog_name=$prog['name'];
                     echo"
-                        <option value=>".
-                    "; */
+                       
+                    "; 
                 ?>
                 <option value="1">Undergraduate</option>
                 <option value="2">Postgraduate</option>
