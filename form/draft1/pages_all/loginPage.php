@@ -31,21 +31,12 @@
                 <br>
                 <label id="program">Select Program</label>
                 <select id="program" name="program">
-    
-    <!--                 <?php
-                    require_once "API.php";
-                    $progAPI=new API();
-                    $progAPI->getAllProg();
-
-                    //$prog_id=$prog['id'];
-                    //$prog_name=$prog['name'];
-                    echo"
-                       
-                    "; 
-                    ?> -->
-    
-                    <option value="1" name="Undergraduate" id="Undergraduate">Undergraduate</option>
-                    <option value="2">Postgraduate</option>
+                    <?php
+                        require "master_data.php";
+                        foreach($progMasterArr as $prog){
+                            echo "<option value=".$prog[0].">".$prog[2]."</option>";
+                        }
+                    ?>
                 </select>
                 <br><br>
                 <label for="username">Username</label>

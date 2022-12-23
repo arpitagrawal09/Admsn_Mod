@@ -9,7 +9,7 @@ if(isset($_POST)&&!empty($_POST)){
     if(!empty($_POST['password']))
         $_SESSION['user']['password']=$_POST['password'];
     if(!empty($_POST['program']))
-        $_SESSION['user']['program']=$_POST['password'];
+        $_SESSION['user']['program']=$_POST['program'];
 }else echo "Error in receiving the student login details/program";
 ?>
 
@@ -41,12 +41,12 @@ if(isset($_POST)&&!empty($_POST)){
                 <div class="courseSelDiv" id="idCourseSel" name="nameCourseSel">
                     <div class="row degreeRow">                              
                         <div class="col-sm-2">
-                            <label>Degree Name</label>
+                            <label>Select Degree</label>
                             <select id="ddnBA" name="ddnBA">
                                 <?php
                                     require_once "master_data.php";
                                     foreach($progMasterArr as $prog){
-                                        echo "<option value=".$prog['0'].">".$prog['2']."</option>";                                        ";
+                                        echo "<option value=".$prog[0].">".$prog[2]."</option>";
                                     }
                                 ?>
                             </select>        
