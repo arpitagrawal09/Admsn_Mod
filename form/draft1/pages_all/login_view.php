@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML>
     <head>
-        <title>Admission Login!</title>
+        <title><marquee>Admission Login!</marquee></title>
     </head>
     <body>
         <form action="login_controller.php" method="POST">
