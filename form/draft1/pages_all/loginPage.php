@@ -25,7 +25,7 @@
             <marquee>Admission for the programmes is open!</marquee>
         </div>
         
-        <form action="login_controller.php" method="POST">
+        <form action="formPage.php" method="POST">
             <div class="loginBox">
                 <h1>LOGIN</h1>
                 <br>
