@@ -34,8 +34,8 @@
                         <option value="none" disabled>--Select--</option>
                         <?php
                             require "master_data.php";
-                            foreach($degreeMasterArr as $degree){
-                                echo "<option value=".$degree[0].">".$degree[2]."</option>";
+                            foreach($progMasterArr as $prog){
+                                echo "<option value=".$prog[0].">".$prog[1]."</option>";
                             }
                         ?>
                 </select>
