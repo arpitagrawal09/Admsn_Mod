@@ -35,4 +35,12 @@
 
     $masterArr['prog']=$progMasterArr;
     $masterArr['degrees']=$degreeMasterArr;
+
+    function fillDdn($ddnName){
+        foreach($masterArr[$ddnName] as $row){
+            foreach($row as $item){
+                
+            }
+        }
+    }
 ?>
