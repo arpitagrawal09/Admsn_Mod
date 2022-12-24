@@ -34,9 +34,8 @@
                         <option value="none" disabled>--Select--</option>
                         <?php
                             require "master_data.php";
-                            fillDdn();
                             foreach($progMasterArr as $prog){
-                                echo "<option value=".$degree[0].">".$prog[2]."</option>";
+                                echo "<option value=".$prog[0].">".$prog[2]."</option>";
                             }
                         ?>
                 </select>

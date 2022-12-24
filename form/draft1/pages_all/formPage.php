@@ -28,8 +28,8 @@ if(isset($_POST)&&!empty($_POST)){
         <div class="container" class="allDetailsForms" id="divAllDetails" name="divAllDetails">
             <br>
            
-            <form id="allDetailsForm" name="allDetailsForm" action="paymentPage.php" method="POST">
-                <div class="detailsdiv personal" name="divPersonalDetails" id="divPersonalDetails">
+            <form id="idAllDetailsForm" name="nameAllDetailsForm" action="paymentPage.php" method="POST">
+                <div class="divDetails divPersonal" name="divPersonalDetails" id="divPersonalDetails">
                     <div class="row one" id="pdRow1" name="pdRow1">
 
                     </div>
@@ -38,16 +38,14 @@ if(isset($_POST)&&!empty($_POST)){
                     </div>
                 <div>
              
-                <div class="courseSelDiv" id="idCourseSel" name="nameCourseSel">
+                <div class="divCourseSel divDdn" id="idCourseSel" name="nameCourseSel">
                     <div class="row degreeRow">                              
-                        <div class="col-sm-2">
-                            <label>Select Degree</label>
-                            <select id="ddnBA" name="ddnBA">
+                        <div class="col-sm-2 divDdn">
+                            <label for="ddnDegree">Select Degree</label>
+                            <select id="ddnDegree" name="ddnDegree">
                                 <?php
                                     require_once "master_data.php";
-                                    foreach($progMasterArr as $prog){
-                                        echo "<option value=".$prog[0].">".$prog[2]."</option>";
-                                    }
+                                    fillDdn("degrees", $conn, "name");
                                 ?>
                             </select>        
                         </div>

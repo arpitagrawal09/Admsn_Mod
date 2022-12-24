@@ -36,11 +36,41 @@
     $masterArr['prog']=$progMasterArr;
     $masterArr['degrees']=$degreeMasterArr;
 
-    function fillDdn($ddnName){
+/*     function fillDdn($ddnName){
         foreach($masterArr[$ddnName] as $row){
             foreach($row as $item){
-                
+
             }
+        }
+    } */
+
+/*     $elecCombMasterArr=array();
+    if($elecCombFetchedArr){
+        while($elecCombRow=$elecCombFetchedArr->fetch_assoc()){
+            $elecCombMasterArr[]=$elecCombRow;
+        }
+    } */
+
+    function getMasterArr($tableName, $conn){
+        $tableMasterArr=array();
+        $sql="SELECT * FROM `".$tableName."`";
+        $tableFetched=$conn->query($sql);
+        if($tableFetched){
+            while($tableRow=$tableFetched->fetch_assoc()){
+                $tableMasterArr[]=$tableRow;
+            }
+        }
+        return $tableMasterArr;
+    }
+
+    function fillDdn($tableName, $conn, $fieldName){
+        $tableMasterArr=getMasterArr($tableName, $conn);
+        foreach($tableMasterArr as $tableRow){
+            $recordId=$tableRow['id'];
+            $recordVal=$tableRow[$fieldName];
+            $optionVal=$recordId;
+            $optionTxt=$recordVal;
+            echo "<option value=".$optionVal.">".$optionTxt."</option>";
         }
     }
 ?>

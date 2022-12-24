@@ -15,3 +15,10 @@ $("document").onload(function(){
         }
     });
 });
+
+$("document").ready(function(){
+    $("select").onchange(function(){
+        var val=$("select").val();
+        alert("Value changed!");
+    });
+});
