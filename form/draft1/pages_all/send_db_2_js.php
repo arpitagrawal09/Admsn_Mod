@@ -8,7 +8,7 @@ if(isset($_GET)&&!empty($_GET)){
     $degreeId = $_GET['degreeId'];
 }
 $table_name = "elec_comb";
-$sql="SELECT * FROM`".$table_name."` WHERE `degreeId`=".$degreeId;
+$sql="SELECT `id`,`name` FROM`".$table_name."` WHERE `degreeId`=".$degreeId;
 $elecCombArrFetch = $conn->query($sql);
 if($elecCombArrFetch){
     $elecCombArr = $elecCombArrFetch->fetch_all();

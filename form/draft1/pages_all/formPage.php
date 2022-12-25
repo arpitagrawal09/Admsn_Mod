@@ -37,7 +37,7 @@ if(isset($_POST)&&!empty($_POST)){
             }); */
 
             $(document).ready(function(){
-                $("select").change(function(){
+                $("#ddnDegree").change(function(){
                     var val=$("select").val();
                     alert("Value"+val+"selected");
                     populateDdnElecComb(val);
@@ -51,13 +51,13 @@ if(isset($_POST)&&!empty($_POST)){
                         elecCombSetJSON = this.responseText;
                         elecCombSetParsed=$.parseJSON(elecCombSetJSON);
                         var ddnElecComb=$("#idDdnElecComb");
-                        $.each(elecCombArray, function()){
+                        $.each(elecCombArray, function(val, name){
                             ddnElecComb.append($('<option></option>').val(val),html(text));
-                        }
+                        });
                     }
                 };                
-                reqObj.open();
-                reqObj.send("GET","send_db_2_js.php?degreeId="+degreeId,true);
+                reqObj.send();
+                reqObj.open("GET","send_db_2_js.php?degreeId="+degreeId,true);
             }
 
         </script>
