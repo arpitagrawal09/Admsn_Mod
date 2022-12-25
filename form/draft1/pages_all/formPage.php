@@ -40,25 +40,24 @@ if(isset($_POST)&&!empty($_POST)){
                 $("select").change(function(){
                     var val=$("select").val();
                     alert("Value"+val+"selected");
-                    populateElecDdn(this);
+                    populateDdnElecComb(val);
                 })
             });
 
-            function populateDdnElecComb(val){
-                var elecCombBA;
-                elecCombBA=['AP01','AP04','AP72'];
+            function populateDdnElecComb(degreeId){
                 var reqObj=new XMLHttpRequest();
-                var recdJSON=reqObj.responseText;
+                reqObj.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        elecCombSetJSON = this.responseText;
+                        elecCombSetParsed=$.parseJSON(elecCombSetJSON);
+                        var ddnElecComb=$("#idDdnElecComb");
+                        $.each(elecCombArray, function()){
+                            ddnElecComb.append($('<option></option>').val(val),html(text));
+                        }
+                    }
+                };                
                 reqObj.open();
-                reqObj.send("GET","",true);
-                switch(val){
-                    case 1:
-
-                    case 2:
-                        
-                    default:
-                        break;
-                }
+                reqObj.send("GET","send_db_2_js.php?degreeId="+degreeId,true);
             }
 
         </script>
