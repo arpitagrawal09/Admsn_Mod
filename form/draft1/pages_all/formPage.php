@@ -52,7 +52,7 @@ if(isset($_POST)&&!empty($_POST)){
                         elecCombSetParsed=$.parseJSON(elecCombSetJSON);
                         var ddnElecCombRef=$("#idDdnElecComb");
                         $.each(elecCombSetParsed, function(val, name){
-                            ddnElecCombRef.append($('<option></option>').val(val),html(name));
+                            ddnElecCombRef.append($('<option></option>').val(val).html(name));
                         });
                     }
                 };                
@@ -96,6 +96,8 @@ if(isset($_POST)&&!empty($_POST)){
                         </div>
 
                     </div>
+
+                    <br><br>
 
                     <div class="row elecCombSel" id="" name="">
                         <div class="col-sm-2" divDdnElec>
