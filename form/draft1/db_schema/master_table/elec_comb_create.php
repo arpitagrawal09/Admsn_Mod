@@ -7,7 +7,7 @@ require  "connection.php";
 $sql="CREATE TABLE `elec_comb`(
     `id` BIGINT(32)  PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `elec_comb` VARCHAR(205) NOT NULL,
-    `degree_id` SMALLINT(9) NOT NULL
+    `degree_id` SMALLINT(9) NOT NULL,
     FOREIGN KEY (`degree_id`) REFERENCES `degrees`(`id`)
     );";
 $queryFlag=$conn->query($sql);
