@@ -73,15 +73,39 @@ if(isset($_POST)&&!empty($_POST)){
             <br>
            
             <form id="idAllDetailsForm" name="nameAllDetailsForm" action="paymentPage.php" method="POST">
+                
+                
                 <div class="divDetails divPersonal" name="divPersonalDetails" id="divPersonalDetails">
+                    
                     <div class="row one" id="pdRow1" name="pdRow1">
 
+                        <div class="col-sm-2">
+                        <label for="CandidateName">Candidate's name</label>
+                        <input type="text" id="CandidateName" name="CandidateName">
+                        <div>
+                    
+                        <div class="col-sm-2">
+                        <label for="Father'sName">Father's name</label>
+                        <input type="text" id="Father'sName" name="Father'sName">
+                        <div>                    
+                    
+                        <div class="col-sm-2">
+                        <label for="Mother'sName">Mother's name</label>
+                        <input type="text" id="Mother'sName" name="Mother'sName">
+                        <div>
+
+
+                        
                     </div>
+                    
                     <div class="row two" id="pdRow2" name="pdRow2">
 
                     </div>
+
                 <div>
-             
+                
+                <br><br><hr><br><br>
+
                 <div class="divCourseSel divDdn" id="idCourseSel" name="nameCourseSel">
                     <div class="row degreeChoice">                              
                         
