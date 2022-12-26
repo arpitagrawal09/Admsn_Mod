@@ -17,6 +17,12 @@ if(isset($_POST)&&!empty($_POST)){
     <head>
         <title>Admission Form</title>
         <link rel="stylesheet" href="pd.css">
+        <script src="jquery-3.6.1.min.js"></script>
+        <script src="libraries.js"></script>
+        <script src="BA_populate.js"></script>
+        <script>
+
+        </script>
     </head>
     <body>
 
