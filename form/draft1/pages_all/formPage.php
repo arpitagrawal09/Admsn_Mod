@@ -37,28 +37,27 @@ if(isset($_POST)&&!empty($_POST)){
             }); */
 
             $(document).ready(function(){
-                $("select").change(function(){
-                    var val=$("select").val();
-                    alert("Value"+val+"selected");
-                    populateElecDdn(this);
+                $("#ddnDegree").change(function(){
+                    var degreeId=$("#ddnDegree").val();
+                    alert("Degree with "+ degreeId +" selected");
+                    populateDdnElecComb(degreeId);
                 })
             });
 
-            function populateDdnElecComb(val){
-                var elecCombBA;
-                elecCombBA=['AP01','AP04','AP72'];
+            function populateDdnElecComb(degreeId){
                 var reqObj=new XMLHttpRequest();
-                var recdJSON=reqObj.responseText;
-                reqObj.open();
-                reqObj.send("GET","",true);
-                switch(val){
-                    case 1:
-
-                    case 2:
-                        
-                    default:
-                        break;
-                }
+                reqObj.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        elecCombSetJSON = this.responseText;
+                        elecCombSetParsed=$.parseJSON(elecCombSetJSON);
+                        var ddnElecCombRef=$("#idDdnElecComb");
+                        $.each(elecCombSetParsed, function(val, name){
+                            ddnElecCombRef.append($('<option></option>').val(val).html(name));
+                        });
+                    }
+                };                
+                reqObj.open("GET","send_db_2_js.php?degreeId="+degreeId,true);
+                reqObj.send();
             }
 
         </script>
@@ -74,17 +73,41 @@ if(isset($_POST)&&!empty($_POST)){
             <br>
            
             <form id="idAllDetailsForm" name="nameAllDetailsForm" action="paymentPage.php" method="POST">
+                
+                
                 <div class="divDetails divPersonal" name="divPersonalDetails" id="divPersonalDetails">
+                    
                     <div class="row one" id="pdRow1" name="pdRow1">
 
+                        <div class="col-sm-2">
+                        <label for="CandidateName">Candidate's name</label>
+                        <input type="text" id="CandidateName" name="CandidateName">
+                        <div>
+                    
+                        <div class="col-sm-2">
+                        <label for="Father'sName">Father's name</label>
+                        <input type="text" id="Father'sName" name="Father'sName">
+                        <div>                    
+                    
+                        <div class="col-sm-2">
+                        <label for="Mother'sName">Mother's name</label>
+                        <input type="text" id="Mother'sName" name="Mother'sName">
+                        <div>
+
+
+                        
                     </div>
+                    
                     <div class="row two" id="pdRow2" name="pdRow2">
 
                     </div>
+
                 <div>
-             
+                
+                <br><br><hr><br><br>
+
                 <div class="divCourseSel divDdn" id="idCourseSel" name="nameCourseSel">
-                    <div class="row combRow">                              
+                    <div class="row degreeChoice">                              
                         
                         <div class="col-sm-2 divDdnDegree">
                             <label for="ddnDegree">Select Degree</label>
@@ -96,15 +119,20 @@ if(isset($_POST)&&!empty($_POST)){
                             </select>        
                         </div>
 
-                        <div class="col-sm-2 ddn">
-                            <label for="idDdnElecComb">
+                    </div>
+
+                    <br><br>
+
+                    <div class="row elecCombSel" id="" name="">
+                        <div class="col-sm-2" divDdnElec>
+                        <label for="idDdnElecComb">Select electives</label>
                                 <select id="idDdnElecComb" name="nameDdnElecComb">
 
                                 </select>
                             </label>
-                        </div>
-
+                        </div>    
                     </div>
+
                 </div>  
 
             </form>
