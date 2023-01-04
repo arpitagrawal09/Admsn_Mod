@@ -1,0 +1,38 @@
+<HTML>
+    <head>
+        <script src="jquery-3.6.1.min.js"></script> 
+        <script>
+            $("document").ready(function(){
+                $("#testSel").change(function(){
+                    var reqRef=new XMLHttpRequest();
+                    reqRef.onreadystatechange=function(){
+                        if((this.status==200)&&(this.readyState==4)){
+                            var recdJSON=this.responseText;
+                            var parsedJSON=JSON.parse(recdJSON);
+//                            alert("elec_comb_JSON_recd.");
+                            document.getElementById("o/pPara").innerHTML="If the JSON has been received and being correctly printed then >> Then the parsed JSON is" + parsedJSON;
+                            var retArr=[];
+                            $.each(parsedJSON, function(key,val){
+                                alert("The key-value pair is "+key+" "+val);
+                            });
+                            /* document.getElementById("o/pPara").innerHTML="Here is the array retreived from the recieved JSON"+retArr;
+ */                        }
+                    }
+                    var URL="test.php";
+                    reqRef.open("GET", URL, 1);
+                    reqRef.send();
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h4><b><p>Here is the JSON response</p></b></h4>
+        <h5><p id="o/pPara"></p></h5>
+
+        <select id="testSel">
+            <option val="A">123</option>
+            <option val="B">456</option>
+        </select>
+    </body>
+</HTML>
