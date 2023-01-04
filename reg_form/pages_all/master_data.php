@@ -5,15 +5,8 @@
     $progMasterArr=array();
     $sql="SELECT * FROM `arbitrary_prog_type`";
     $progMasterTable=$conn->query($sql);
-<<<<<<<< HEAD:form/branch_offc_maybe/pages_all/master_data.php
-    //if($progMasterTable) 
-    //    echo "Master table prog_type successfully fetched<br>";
-    //else 
-        //echo "Error in getting master table prog_type<br>";
-========
     //if($progMasterTable) echo "Master table prog_type successfully fetched<br>";
     //else "Error in getting master table prog_type<br>";
->>>>>>>> 2d3432e7e5edea9fa897b817c2998f3c4f678a72:reg_form/pages_all/master_data.php
     //echo "<PRE>";
     if($progMasterTable){
         while($prog=$progMasterTable->fetch_row()){
