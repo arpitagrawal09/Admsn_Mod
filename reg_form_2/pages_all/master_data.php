@@ -18,7 +18,7 @@
     //echo "<br>";
 
     $degreeMasterArr=array();
-    $sql="SELECT * FROM `degrees`";
+    $sql="SELECT * FROM `program_preparing`";
     $degreeMasterTable=$conn->query($sql);
     if($degreeMasterTable) echo "Master table degrees successfully fetched<br>";
     else "Error in getting master table degrees<br>";
