@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
--- Host: localhost    Database: admsn
+-- Host: localhost    Database: mock_admission_1
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.27-MariaDB
 
