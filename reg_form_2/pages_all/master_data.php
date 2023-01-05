@@ -3,7 +3,7 @@
     require "connection.php";
 
     $progMasterArr=array();
-    $sql="SELECT * FROM `arbitrary_prog_type`";
+    $sql="SELECT * FROM `prog_arbitrary`";
     $progMasterTable=$conn->query($sql);
     //if($progMasterTable) echo "Master table prog_type successfully fetched<br>";
     //else "Error in getting master table prog_type<br>";
