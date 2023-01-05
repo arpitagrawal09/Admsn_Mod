@@ -4,7 +4,7 @@
 define("DB_username", "root");
 define("DB_password", "password");
 define("DB_servername", "localhost");
-define("DB_db", "mock_admission_1");
+define("DB_db", "admsn");
 
 define("PROG_TABLE", "prog_type");
 
