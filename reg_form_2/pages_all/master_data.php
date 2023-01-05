@@ -3,7 +3,7 @@
     require "connection.php";
 
     $progMasterArr=array();
-    $sql="SELECT * FROM `arbitrary_prog_type`";
+    $sql="SELECT * FROM `prog_name_final?`";
     $progMasterTable=$conn->query($sql);
     //if($progMasterTable) echo "Master table prog_type successfully fetched<br>";
     //else "Error in getting master table prog_type<br>";
@@ -18,7 +18,7 @@
     //echo "<br>";
 
     $degreeMasterArr=array();
-    $sql="SELECT * FROM `degrees`";
+    $sql="SELECT * FROM `program_preparing`";
     $degreeMasterTable=$conn->query($sql);
     if($degreeMasterTable) echo "Master table degrees successfully fetched<br>";
     else "Error in getting master table degrees<br>";
