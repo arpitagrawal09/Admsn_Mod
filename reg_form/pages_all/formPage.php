@@ -114,7 +114,7 @@ if(isset($_POST)&&!empty($_POST)){
                             <select id="ddnDegree" name="ddnDegree">
                                 <?php
                                     require_once "master_data.php";
-                                    fillDdn("degrees", $conn, "name");
+                                    fillDdn("program_preparing", $conn, "name");
                                 ?>
                             </select>        
                         </div>
