@@ -9,10 +9,11 @@ if($conn->connect_error)
     die( "Error in connecting the database");
 //else echo "Database connected successfully<br>";
 
-/* if(isset($_GET)&&!empty($_GET)){
+if(isset($_GET)&&!empty($_GET)){
     $degreeId = $_GET['degreeId'];
-} */
-$degreeId = 2;
+}
+
+//$degreeId = 2;
 $table_name = "elec_comb";
 $sql="SELECT `id`,`name` FROM `".$table_name."` WHERE `degree_id`=".$degreeId;
 //echo $sql;
