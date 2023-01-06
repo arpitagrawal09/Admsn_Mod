@@ -14,7 +14,7 @@ if(isset($_GET)&&!empty($_GET)){
 }
 
 //$degreeId = 2;
-$table_name = "elec_comb";
+$table_name = "program_preparing";
 $sql="SELECT `id`,`name` FROM `".$table_name."` WHERE `degree_id`=".$degreeId;
 //echo $sql;
 //die;
