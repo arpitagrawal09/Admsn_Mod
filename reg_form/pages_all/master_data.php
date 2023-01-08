@@ -17,7 +17,7 @@
     //print_r($masterTypeProgArr);
     //echo "<br>";
 
-    $master_progArr=array();
+    $masterProgArr=array();
     $sql="SELECT * FROM `master_prog`";
     $masterProgTable=$conn->query($sql);
     if($masterProgTable) echo "Master table program successfully fetched<br>";
@@ -25,47 +25,47 @@
     //echo "<PRE>";
     if($masterProgTable){
         while($prog=$masterProgTable->fetch_row()){
-            $master_progArr[]=$degree;
+            $masterProgArr[]=$degree;
         }
     }
     //print_r($masterProgTable);
     //echo "<br>";
-    //print_r($master_progArr);
+    //print_r($masterProgArr);
     //echo "<br>";
 
-    $arr_master['prog']=$masterTypeProgArr;
-    $arr_master['degrees']=$master_progArr;
+    $arrMaster['typeProg']=$masterTypeProgArr;
+    $arrMaster['prog']=$masterProgArr;
 
 /*     function fillDdn($ddnName){
-        foreach($arr_master[$ddnName] as $row){
+        foreach($arrMaster[$ddnName] as $row){
             foreach($row as $item){
 
             }
         }
     } */
 
-/*     $elecCombarr_master=array();
+/*     $elecCombarrMaster=array();
     if($elecCombFetchedArr){
         while($elecCombRow=$elecCombFetchedArr->fetch_assoc()){
-            $elecCombarr_master[]=$elecCombRow;
+            $elecCombarrMaster[]=$elecCombRow;
         }
     } */
 
-    function get_arr_master($tableName, $conn){
-        $arr_master_tbl=array();
+    function get_arrMaster($tableName, $conn){
+        $arrMaster_tbl=array();
         $sql="SELECT * FROM `".$tableName."`";
         $tableFetched=$conn->query($sql);
         if($tableFetched){
             while($tableRow=$tableFetched->fetch_assoc()){
-                $arr_master_tbl[]=$tableRow;
+                $arrMaster_tbl[]=$tableRow;
             }
         }
-        return $arr_master_tbl;
+        return $arrMaster_tbl;
     }
 
     function fillDdn($tableName, $fieldName, $conn){
-        $arr_master_tbl=get_arr_master($tableName, $conn);
-        foreach($arr_master_tbl as $tableRow){
+        $arrMaster_tbl=get_arrMaster($tableName, $conn);
+        foreach($arrMaster_tbl as $tableRow){
             $recordId=$tableRow['id'];
             $recordVal=$tableRow[$fieldName];
             $optionVal=$recordId;
