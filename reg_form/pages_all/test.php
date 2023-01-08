@@ -1,8 +1,6 @@
 <?php
 
     require_once "master_data.php";
-    echo "jfy";
-    die;
     //$masterNRCombArr = get_arrMaster("comb_nr", $conn);
     
     echo "
