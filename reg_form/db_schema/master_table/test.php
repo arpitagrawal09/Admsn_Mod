@@ -2,6 +2,13 @@
 
     require_once "master_data.php";
 
-    get_arrMaster(comb               bn h      )    
+    $masterNRCombArr = get_arrMaster("comb_nr", $conn);
+    echo "
+        <html>
+            <head>
+                <title></title>
+            </head>
+        </html>
+    ";    
 
 ?>
