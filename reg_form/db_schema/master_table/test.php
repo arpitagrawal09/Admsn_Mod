@@ -17,7 +17,7 @@
                     <tr>
     ";
     foreach($masterNRCombArr as $row){
-        if($row['id']<0 )
+        if(($row['id']<0) OR ($row['id']<0))
         echo "<tr>";
         echo "<td>".$row['id']."</td>";        
         echo "<td>".$row['comb_choice']."</td>";
