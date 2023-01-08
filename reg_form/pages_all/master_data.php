@@ -2,70 +2,70 @@
     require "configuration.php";
     require "connection.php";
 
-    $progMasterArr=array();
-    $sql="SELECT * FROM `prog_type`";
-    $progMasterTable=$conn->query($sql);
-    //if($progMasterTable) echo "Master table prog_type successfully fetched<br>";
+    $masterTypeProgArr=array();
+    $sql="SELECT * FROM `master_type_prog`";
+    $masterTypeProgTable=$conn->query($sql);
+    //if($masterTypeProgTable) echo "Master table prog_type successfully fetched<br>";
     //else "Error in getting master table prog_type<br>";
     //echo "<PRE>";
-    if($progMasterTable){
-        while($prog=$progMasterTable->fetch_row()){
-            $progMasterArr[]=$prog;
+    if($masterTypeProgTable){
+        while($progType=$masterTypeProgTable->fetch_row()){
+            $masterTypeProgArr[]=$progType;
         }
     }
-    //print_r($progMasterTable);
-    //print_r($progMasterArr);
+    //print_r($masterTypeProgTable);
+    //print_r($masterTypeProgArr);
     //echo "<br>";
 
-    $degreeMasterArr=array();
-    $sql="SELECT * FROM `program_preparing`";
-    $degreeMasterTable=$conn->query($sql);
-    if($degreeMasterTable) echo "Master table degrees successfully fetched<br>";
-    else "Error in getting master table degrees<br>";
+    $master_progArr=array();
+    $sql="SELECT * FROM `master_prog`";
+    $masterProgTable=$conn->query($sql);
+    if($masterProgTable) echo "Master table program successfully fetched<br>";
+    else "Error in getting master table program<br>";
     //echo "<PRE>";
-    if($degreeMasterTable){
-        while($degree=$degreeMasterTable->fetch_row()){
-            $degreeMasterArr[]=$degree;
+    if($masterProgTable){
+        while($prog=$masterProgTable->fetch_row()){
+            $master_progArr[]=$degree;
         }
     }
-    //print_r($degreeMasterTable);
+    //print_r($masterProgTable);
     //echo "<br>";
-    //print_r($degreeMasterArr);
+    //print_r($master_progArr);
     //echo "<br>";
 
-    $masterArr['prog']=$progMasterArr;
-    $masterArr['degrees']=$degreeMasterArr;
+    $arr_master['prog']=$masterTypeProgArr;
+    $arr_master['degrees']=$master_progArr;
 
 /*     function fillDdn($ddnName){
-        foreach($masterArr[$ddnName] as $row){
+        foreach($arr_master[$ddnName] as $row){
             foreach($row as $item){
 
             }
         }
     } */
 
-/*     $elecCombMasterArr=array();
+/*     $elecCombarr_master=array();
     if($elecCombFetchedArr){
         while($elecCombRow=$elecCombFetchedArr->fetch_assoc()){
-            $elecCombMasterArr[]=$elecCombRow;
+            $elecCombarr_master[]=$elecCombRow;
         }
     } */
 
-    function getMasterArr($tableName, $conn){
-        $tableMasterArr=array();
+    function get_arr_master($tableName, $conn){
+        $arr_master_tbl=array();
         $sql="SELECT * FROM `".$tableName."`";
         $tableFetched=$conn->query($sql);
         if($tableFetched){
             while($tableRow=$tableFetched->fetch_assoc()){
-                $tableMasterArr[]=$tableRow;
+                $arr_master_tbl[]=$tableRow;
             }
         }
-        return $tableMasterArr;
+        return $arr_master_tbl;
     }
 
-    function fillDdn($tableName, $conn, $fieldName){
-        $tableMasterArr=getMasterArr($tableName, $conn);
-        foreach($tableMasterArr as $tableRow){
+    function fillDdn($tableName, $fieldName, $conn){
+        $arr_master_tbl=get_arr_master($tableName, $conn);
+        foreach($arr_master_tbl as $tableRow){
             $recordId=$tableRow['id'];
             $recordVal=$tableRow[$fieldName];
             $optionVal=$recordId;
