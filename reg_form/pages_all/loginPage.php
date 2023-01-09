@@ -41,8 +41,8 @@
                         <?php
                             require "master_data.php";
                             foreach($masterTypeProgArr as $progType){
-                                echo "insdie";
-                                echo "<option value=".$progType['id'].">".$prog['name']."</option>";
+                                echo "inside";
+                                echo "<option value=".$progType['id'].">".$progType['name']."</option>";
                             }
                         ?>
                 </select>

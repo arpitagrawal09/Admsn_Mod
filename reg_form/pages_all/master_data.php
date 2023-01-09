@@ -7,15 +7,16 @@
     $masterTypeProgTable=$conn->query($sql);
     if($masterTypeProgTable) echo "Master table prog_type successfully fetched<br>";
     else "Error in getting master table prog_type<br>";
-    //echo "<PRE>";
     if($masterTypeProgTable){
         while($progType=$masterTypeProgTable->fetch_assoc()){
             $masterTypeProgArr[]=$progType;
         }
     }
-    //print_r($masterTypeProgTable);
-    //print_r($masterTypeProgArr);
-    //echo "<br>";
+/*     echo "<PRE>";
+    print_r($masterTypeProgTable);
+    print_r($masterTypeProgArr);
+    echo "<br>";
+    die; */
 
     $masterProgArr=array();
     $sql="SELECT * FROM `master_prog`";
