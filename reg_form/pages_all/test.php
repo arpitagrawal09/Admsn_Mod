@@ -1,7 +1,7 @@
 <?php
 
     require_once "master_data.php";
-    //$masterNRCombArr = get_arrMaster("comb_nr", $conn);
+    $masterNRCombArr = get_arrMaster("comb_nr", $conn);
     
     echo "
         <html>
@@ -17,12 +17,13 @@
                     <tr>
     ";
     foreach($masterNRCombArr as $row){
-        if(($row['id']<0) OR ($row['id']>20)) break;
+        echo "1";
+/*         if(($row['id']<0) || ($row['id']>20)) break;
         echo "<tr>";
         echo "<td>".$row['id']."</td>";        
         echo "<td>".$row['comb_choice']."</td>";
         echo "</tr>";    
-        $i++;
+        $i++; */
     }
     echo "
                 </table>
