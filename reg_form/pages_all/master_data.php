@@ -5,11 +5,11 @@
     $masterTypeProgArr=array();
     $sql="SELECT * FROM `master_type_prog`";
     $masterTypeProgTable=$conn->query($sql);
-    //if($masterTypeProgTable) echo "Master table prog_type successfully fetched<br>";
-    //else "Error in getting master table prog_type<br>";
+    if($masterTypeProgTable) echo "Master table prog_type successfully fetched<br>";
+    else "Error in getting master table prog_type<br>";
     //echo "<PRE>";
     if($masterTypeProgTable){
-        while($progType=$masterTypeProgTable->fetch_row()){
+        while($progType=$masterTypeProgTable->fetch_assoc()){
             $masterTypeProgArr[]=$progType;
         }
     }

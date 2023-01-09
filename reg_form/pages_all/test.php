@@ -1,34 +1,31 @@
 <?php
 
-    require_once "master_data.php";
-    $masterNRCombArr = get_arrMaster("comb_nr", $conn);
+    require_once "connection.php";
     
-    echo "
-        <html>
-            <head>
-                <title>List of combs</title>
-            </head>
-            <body>
-                <table>
-                    <th>
-                        <td>Comb Id</td>
-                        <td>Combination</td>
-                    </th>
-                    <tr>
-    ";
+    function get_arrMaster($tableName, $conn){
+        $arrMaster_tbl=array();
+        $sql="SELECT * FROM `".$tableName."`";
+        $tableFetched=$conn->query($sql);
+        if($tableFetched){
+            while($tableRow=$tableFetched->fetch_assoc()){
+                $arrMaster_tbl[]=$tableRow;
+            }
+        }
+        return $arrMaster_tbl;
+    }
+    $masterNRCombArr = get_arrMaster("comb_nr", $conn);
+
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Comb Id</th>";
+    echo "<th>Combination</th>";
+    echo "</tr>";    
     foreach($masterNRCombArr as $row){
-        echo "1";
-/*         if(($row['id']<0) || ($row['id']>20)) break;
+        if(($row['id']<0) || ($row['id']>20)) break;
         echo "<tr>";
         echo "<td>".$row['id']."</td>";        
         echo "<td>".$row['comb_choice']."</td>";
         echo "</tr>";    
-        $i++; */
     }
-    echo "
-                </table>
-            <body>
-        </html>
-    ";    
-
+    echo "</table>";
 ?>

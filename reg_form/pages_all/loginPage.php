@@ -40,8 +40,9 @@
                         <option value="none" disabled>--Select--</option>
                         <?php
                             require "master_data.php";
-                            foreach($master_type_progArr as $prog){
-                                echo "<option value=".$prog[0].">".$prog[2]."</option>";
+                            foreach($masterTypeProgArr as $progType){
+                                echo "insdie";
+                                echo "<option value=".$progType['id'].">".$prog['name']."</option>";
                             }
                         ?>
                 </select>

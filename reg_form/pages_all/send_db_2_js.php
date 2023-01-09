@@ -10,12 +10,12 @@ if($conn->connect_error)
 //else echo "Database connected successfully<br>";
 
 if(isset($_GET)&&!empty($_GET)){
-    $degreeId = $_GET['degreeId'];
+    $idProg = $_GET['degreeId'];
 }
 
-//$degreeId = 2;
-$table_name = "program_preparing";
-$sql="SELECT `id`,`name` FROM `".$table_name."` WHERE `degree_id`=".$degreeId;
+//idProg = 2;
+$table_name = "prog";
+$sql="SELECT `id`,`name` FROM `".$table_name."` WHERE `id_prog`=".$idProg;
 //echo $sql;
 //die;
 $elecCombArrFetch = $conn->query($sql);
