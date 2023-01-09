@@ -25,7 +25,7 @@
     //echo "<PRE>";
     if($masterProgTable){
         while($prog=$masterProgTable->fetch_row()){
-            $masterProgArr[]=$degree;
+            $masterProgArr[]=$prog;
         }
     }
     //print_r($masterProgTable);
