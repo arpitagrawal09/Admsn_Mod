@@ -1,6 +1,14 @@
 <?php
+include "DataAPI.php";
 
-    require_once "connection.php";
+$tableName="comb_r";
+$colName1="id_specialisation_1";
+$colName2="id_specialisation_2";
+$colName3="id_specialisation_3";
+$masterProgTypeAPI=new DataAPI();
+$subCombExplodedArr=$masterProgTypeAPI->getArrFromTbl($tableName);
+
+/*     require_once "connection.php";
     
     function get_arrMaster($tableName, $conn){
         $arrMaster_tbl=array();
@@ -27,5 +35,5 @@
         echo "<td>".$row['comb_choice']."</td>";
         echo "</tr>";    
     }
-    echo "</table>";
+    echo "</table>"; */
 ?>
