@@ -2,11 +2,20 @@
 include "DataAPI.php";
 
 $tableName="comb_r";
-$colName1="id_specialisation_1";
-$colName2="id_specialisation_2";
-$colName3="id_specialisation_3";
+$specialisationArr=array();
+$specialisation_1="";
+$specialisation_2="";
+$specialisation_3="";
+$optionCode="";
 $masterProgTypeAPI=new DataAPI();
 $subCombExplodedArr=$masterProgTypeAPI->getArrFromTbl($tableName);
+foreach($subCombExplodedArr as $rowExploded){
+    $specialisation_1=$rowExploded['id_specialisation_1'];
+    $specialisation_2=$rowExploded['id_specialisation_2'];
+    $specialisation_3=$rowExploded['id_specialisation_3'];
+    $optionCode=$rowExploded['option_code'];
+}
+$elecComb="get from concatenation/implode/removing NA";
 
 /*     require_once "connection.php";
     
