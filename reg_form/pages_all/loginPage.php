@@ -39,11 +39,19 @@
                     <select id="program" name="program">
                         <option value="none" disabled>--Select--</option>
                         <?php
-                            require "master_data.php";
+/*                          require "master_data.php";
                             foreach($masterTypeProgArr as $progType){
                                 echo "inside";
                                 echo "<option value=".$progType['id'].">".$progType['name']."</option>";
                             }
+                            
+ */                     
+                        include "DataAPI.php";    
+
+                        $tableName="master_type_prog";
+                        $colName="name";
+                        $masterProgTypeAPI=new DataAPI();
+                        $masterProgTypeAPI->fillDdn($tableName, $colName);
                         ?>
                 </select>
                 <br><br>

@@ -15,7 +15,7 @@
             else echo "Database connected successfully<br>";
         }
 
-        public function getArrFromTblName($tblName){
+        public function getArrFromTbl($tblName){
             $sql = "SELECT * FROM `".$tblName."`";
             $result=$this->conn->query($sql);
             if($result) echo "Table ".$tblName." successfully fetched<br>";
@@ -29,11 +29,11 @@
             return $masterArr;
         }        
 
-        function fillDdn($tableName, $fieldName){
-            $masterArr=$this->getArrFromTblName($tableName, $this->conn);
+        function fillDdn($tableName, $colName){
+            $masterArr=$this->getArrFromTbl($tableName, $this->conn);
             foreach($masterArr as $tableRow){
                 $recordId=$tableRow['id'];
-                $recordVal=$tableRow[$fieldName];
+                $recordVal=$tableRow[$colName];
                 $optionVal=$recordId;
                 $optionTxt=$recordVal;
                 echo "<option value=".$optionVal.">".$optionTxt."</option>";
@@ -41,8 +41,8 @@
         }
     }
     
-    $dataAPI=new DataAPI();
+    /* $dataAPI=new DataAPI();
     $arr=$dataAPI->getArrFromTblName("master_type_prog");
     echo "<PRE>";
-    foreach($arr as $row) print_r($row);
+    foreach($arr as $row) print_r($row); */
 ?>

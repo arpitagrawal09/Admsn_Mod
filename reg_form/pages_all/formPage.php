@@ -110,11 +110,12 @@ if(isset($_POST)&&!empty($_POST)){
                     <div class="row degreeChoice">                              
                         
                         <div class="col-sm-2 divDdnDegree">
-                            <label for="ddnDegree">Select Degree</label>
+                            <label for="ddnDegree">Select Program</label>
                             <select id="ddnDegree" name="ddnDegree">
                                 <?php
-                                    require_once "master_data.php";
-                                    fillDdn("program_preparing", $conn, "name");
+                                    require_once "DataAPI.php";
+                                    $masterTblDataAPI=new DataAPI();
+                                    $masterTblDataAPI->fillDdn("master_prog","name");
                                 ?>
                             </select>        
                         </div>

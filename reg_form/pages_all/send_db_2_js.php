@@ -14,8 +14,8 @@ if(isset($_GET)&&!empty($_GET)){
 }
 
 //idProg = 2;
-$table_name = "prog";
-$sql="SELECT `id`,`name` FROM `".$table_name."` WHERE `id_prog`=".$idProg;
+$table_name = "master_prog";
+$sql="SELECT `id`,`name` FROM `".$table_name."` WHERE `id`=".$idProg;
 //echo $sql;
 //die;
 $elecCombArrFetch = $conn->query($sql);
