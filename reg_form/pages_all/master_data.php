@@ -12,7 +12,7 @@
             $masterTypeProgArr[]=$progType;
         }
     }
-/*     echo "<PRE>";
+/*  echo "<PRE>";
     print_r($result);
     print_r($masterTypeProgArr);
     echo "<br>";
@@ -23,19 +23,19 @@
     $masterProgTable=$conn->query($sql);
     if($masterProgTable) echo "Master table program successfully fetched<br>";
     else "Error in getting master table program<br>";
-    //echo "<PRE>";
     if($masterProgTable){
         while($prog=$masterProgTable->fetch_row()){
             $masterProgArr[]=$prog;
         }
     }
-    //print_r($masterProgTable);
-    //echo "<br>";
-    //print_r($masterProgArr);
-    //echo "<br>";
+/*     echo "<PRE>";
+    print_r($masterProgTable);
+    echo "<br>";
+    print_r($masterProgArr);
+    echo "<br>"; */
 
-    $arrMaster['typeProg']=$masterTypeProgArr;
-    $arrMaster['prog']=$masterProgArr;
+/*     $arrMaster['typeProg']=$masterTypeProgArr;
+    $arrMaster['prog']=$masterProgArr; */
 
 /*     function fillDdn($ddnName){
         foreach($arrMaster[$ddnName] as $row){
