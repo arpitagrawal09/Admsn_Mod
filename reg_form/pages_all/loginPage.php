@@ -23,6 +23,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>        
         <script src="jquery-3.6.1.min.js"></script>
+        <script src="loginPage.css"></script>
         <!-- <script src="libraries.js"></script>         -->
         <title>Login IIS University!</title>
     </head>
@@ -44,8 +45,7 @@
                                 echo "inside";
                                 echo "<option value=".$progType['id'].">".$progType['name']."</option>";
                             }
-                            
- */                     
+*/                      
                         include "DataAPI.php";    
 
                         $tableName="master_type_prog";
@@ -61,7 +61,7 @@
                 <label for="password">Password</label>
                 <input type="text" id="password" name="password">
                 <br><br>
-                <button type="sumbit" id="buttonLogin" name="buttonLogin" onclick="validate()">Login</button>
+                <button type="sumbit" id="buttonLogin" name="buttonLogin">Login</button>
                 <br>    
             </div>
         </form>
