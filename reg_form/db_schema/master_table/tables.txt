@@ -1,0 +1,26 @@
+morning 1/11/23 dump_home.sql(all tables)
+1) comb_nr : issue ?
+2) comb_r : done
+3) master_choice_sub : done
+4) master_duration_units : done
+5) master_len_yrs : done
+6) master_prog : done
+7) master_remark : done
+8) master_session_acad : done 
+9) master_template_prog : done
+10) master_type_prog : done 
+11) master_type_sub : done 
+12) struct + joins : already updated 
+
+1/11/2023	Foreign Keys
+
+
+
+10/01/2023	Foreign Keys
+
+	KEY `acad_session` (`id_acad_session`),
+	KEY `fk_type_prog` (`id_type`),
+	KEY `fk_id_prog` (`id_prog`),
+ 	CONSTRAINT `comb_r_ibfk_1` FOREIGN KEY (`id_acad_session`) REFERENCES `master_session_acad` (`id`),
+ 	CONSTRAINT `fk_id_prog` FOREIGN KEY (`id_prog`) REFERENCES `master_prog` (`id`),
+ 	CONSTRAINT `fk_type_prog` FOREIGN KEY (`id_type`) REFERENCES `master_type_prog` (`id`)
